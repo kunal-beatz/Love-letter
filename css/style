@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Archivo:ital,wght@0,100..900;1,100..900&family=Bilbo+Swash+Caps&family=Inter:opsz,wght@14..32,500&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap');
+body{
+    position: relative;
+    font-family: "Archivo", serif;
+    background-color: #f4f4f4; margin: 0; overflow:hidden;}
+#bgc {
+    width: 100%;
+    height: 100%;
+    background: url(../img/bg.jpg) center top #f4f4f4;
+    overflow: hidden;
+    background-size: cover;
+}
+.mb-box{width: 416px; height: auto; padding:15px;  z-index: 2; overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.bb {
+    /* margin: 0 auto; */
+    width: 416px;
+    max-height: 609px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px #999;
+    overflow: hidden;
+    background: url(../images/alpha-bg.png);
+    backdrop-filter: blur(5px);
+   
+}
+.bb h2{margin: 15px auto 0px; padding: 20px 0px 10px; width: 280px; font-size:18px; text-align: center; color: #883a78; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+.bb_text {
+    height: 100%;
+    /* min-height: 180px; */
+    /* max-height: 300px; */
+    padding: 20px 40px;
+    text-indent: 2em;
+  
+    line-height: 28px;
+    font-size: 16px;
+    color: #303030;
+    overflow: auto;
+}
+.bb_myname{text-align: right; padding: 0px 40px 20px; line-height: 30px; color: #883a78;}
+.mb-x{width: 500px; height: auto; overflow: hidden; margin-top: 260px;}
+.love_time{width: 100%; text-align: center; font-size: 14px; color:#da8e9c;}
+.love_time span{color:#da8e9c;}
+.musicbg{margin-left: -120px; filter: alpha(opacity=50); opacity: .5; position: fixed; bottom: 60px; left: 50%}
+.musicbg:hover{filter: alpha(opacity=90); opacity: .9}
+.banquan{width: 100%; text-align: center; color: #888; position: fixed; bottom: 30px; font-size:14px;}
+.banquan a{color: #888; text-decoration: none;}
