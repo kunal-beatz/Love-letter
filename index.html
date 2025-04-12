@@ -1,0 +1,117 @@
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body id="bgc">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>A Love Letter | kunal </title>
+    <meta name="language" content="en-US">
+    <meta name="title" content="A Love Letter | kunal ">
+    <meta name="github" content="https://github.com/ziddi-shop">
+    <meta name="describe" content="Collecting resources isn't easy; your star is my motivation to keep going, and PRs are also welcome!">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/js.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <!-- Audio Player -->
+    <audio id="media" src="my.mp3" preload="auto" loop></audio>
+
+    <!-- Optional button (can be removed if fallback is used) -->
+    <button onclick="playMusic()">Play Music</button>
+
+    <script>
+      function playMusic() {
+        var audio = document.getElementById("media");
+        audio.play();
+      }
+    </script>
+
+    <div class="mb-box">
+        <div class="bb">
+            <h2>A Little Love Letter</h2>
+            <div class="bb_text">
+                <div id="code">
+                    Baby, some people say love can make us lose our lives, but I won't let that happen.  
+                    I'll keep living so I can wipe the crumbs from the corner of your mouth;  
+                    I'll keep living so I can buy you the roses you love;  
+                    I'll keep living so I can brush away the tears at the corner of your eyes;  
+                    I'll keep living so I can uphold your happy paradise.  
+                    If one day you find the person who truly has your heart, I'll climb any cliff to pick the flower you desire!  
+                    I want to spend a simple life with you...  
+                    Waking up to your smile and milk with fried eggs on the table, then heading out together, working hard,  
+                    going to the supermarket after work, cooking dinner at home together, and strolling hand in hand at sunset...  
+                    growing old side by side...
+                </div>
+            </div>
+            <p class="bb_myname">
+                - Yours kunal <br>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        Element.prototype.typewriter = function () {
+            var element = this,
+                content = element.innerHTML,
+                index = 0;
+            element.innerHTML = "";
+            var timer = setInterval(function () {
+                var currentChar = content.substr(index, 1);
+                if (currentChar === "<") {
+                    index = content.indexOf(">", index) + 1;
+                } else {
+                    index++;
+                }
+                element.innerHTML = content.substring(0, index) + (index & 1 ? "_" : "");
+                if (index >= content.length) {
+                    clearInterval(timer);
+                }
+            }, 150);
+            return this;
+        };
+        document.getElementById("code").typewriter();
+    </script>
+
+    <script type="text/javascript" src="js/count.js"></script>
+    <script type="text/javascript" async="" src="js/su.js"></script>
+
+    <!-- ✅ Autoplay fallback script with ORANGE music icon -->
+<script>
+    window.addEventListener('load', function () {
+      const audio = document.getElementById('media');
+  
+      // Try autoplay
+      setTimeout(() => {
+        audio.play().catch(() => {
+          // Show orange music icon button if autoplay blocked
+          const btn = document.createElement('button');
+          btn.innerHTML = '🎵'; // Music icon
+          btn.title = "Click to play music";
+          btn.style = `
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 9999;
+            background: orange;
+            color: white;
+            border: none;
+            font-size: 24px;
+            padding: 12px 16px;
+            border-radius: 50%;
+            box-shadow: 0 0 12px rgba(255, 165, 0, 0.8);
+            cursor: pointer;
+            transition: transform 0.2s ease;
+          `;
+          btn.onmouseover = () => btn.style.transform = "scale(1.1)";
+          btn.onmouseout = () => btn.style.transform = "scale(1)";
+          btn.onclick = () => {
+            audio.play();
+            btn.remove();
+          };
+          document.body.appendChild(btn);
+        });
+      }, 1000);
+    });
+  </script>
+  
